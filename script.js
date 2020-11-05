@@ -7,7 +7,7 @@ var rightNum=[];
 
 function generateNumbers(){
   for(i=0 ; i < 5 ; i++){
-    let n = Math.floor(Math.random() * 100);
+    let n = Math.floor((Math.random() * 99) + 1);
     randomNum.includes(n) ? i-- : randomNum.push(n);
   }
   alert(randomNum)
