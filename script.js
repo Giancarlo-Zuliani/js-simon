@@ -20,7 +20,7 @@ generateNumbers();
 setTimeout(function(){
   while(userPick.length < 5){
     let n = parseInt(prompt('inserisci un numero'));
-    userPick.includes(n) ? alert('numero gia inserito') : userPick.push(n);
+    userPick.includes(n) || isNaN(n) ? alert('numero gia inserito o non valido') : userPick.push(n);
   }
   let point = 0;
   for(i=0; i < userPick.length ; i++){
@@ -31,4 +31,4 @@ setTimeout(function(){
     }
   console.log('hai indovinato questi numeri ' + rightNum);
   console.log('hai totalizzato ' + point + ' punti su 5' )
-},3000)
+},300)
