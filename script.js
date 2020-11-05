@@ -3,8 +3,7 @@ var randomNum=[];
 var userPick = [];
 var rightNum=[];
 
-//genarete number
-
+//FUNCTION FOR GENERATE 5 RANDOM NUMBERS
 function generateNumbers(){
   for(i=0 ; i < 5 ; i++){
     let n = Math.floor((Math.random() * 99) + 1);
@@ -16,7 +15,7 @@ function generateNumbers(){
 
 generateNumbers();
 
-
+//AFTER 30S ASK USER FOR 5 NUMBERS AND THE COMPARE TO THE GENERATE ARRAY
 setTimeout(function(){
   while(userPick.length < 5){
     let n = parseInt(prompt('inserisci un numero'));
@@ -31,4 +30,4 @@ setTimeout(function(){
     }
   console.log('hai indovinato questi numeri ' + rightNum);
   console.log('hai totalizzato ' + point + ' punti su 5' )
-},300)
+},3000);
